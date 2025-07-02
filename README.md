@@ -2,16 +2,16 @@
 
 ## 🎼 Visual Structure to Sound: Image-Based Graph Sonification Framework
 
-This project is a custom-built **algorithmic composition system** for translating visual input into musical structure. Developed in Python, it operates as a multi-stage pipeline involving **image analysis**, **unsupervised clustering**, **graph-based modeling**, and **MIDI generation**.
+This project is a custom-built **algorithmic composition system** for translating visual input into musical structure. Developed in Python, it operates as a multi-stage pipeline involving **image analysis**, **unsupervised clustering**, **graph-based modeling** and **MIDI generation**.
 
 Each input image is segmented into clusters according to **shape, contour density, and luminance**. These clusters are used to construct a weighted graph that encodes both **spatial proximity** and **visual intensity**. The resulting graph becomes the blueprint for sound: nodes are mapped to musical parameters such as **pitch, pan, note duration**, and **velocity**, while the structure itself informs **timing** and **gesture**.
 
 The system produces MIDI sequences that are **structurally grounded in the image**, yet musically open—generating forms that are both algorithmically coherent and artistically indeterminate. A dedicated mapping layer ensures **harmonic consistency** (in C major) and introduces additional gestures such as **spatial modulation** and **luminance-derived drones**.
 
-Conceived as an **open compositional instrument**, this system emphasizes not just the sonic output, but the poetics of constraint—the way algorithmic rules shape expressive potential. It is designed for use in **generative sound design**, **visual-music translation**, and **compositional research**.
+Conceived as an **open compositional instrument**, this system emphasizes not just the sonic output, but the poetics of constraint—the way algorithmic rules shape expressive potential. It is designed for use in **generative sound design**, **visual-music translation** and **compositional research**.
+
 
 ---
-
 
 
 ## 🖼️→🎵 Overview
@@ -70,7 +70,7 @@ mapper.create_drone_from_avg_luminance("output_drone.mid")
 * **Pitch** ← average luminance (mapped from 40 to 100, quantized to C major scale)
 * **Velocity** ← cluster size
 * **Duration** ← scaled with minimum threshold
-* **Panning (CC 10)** ← mapped from cluster time or x-position
+* **Panning ** ← mapped from cluster time or x-position
 * **Drone note** ← average luminance across all nodes
 
 ```python
@@ -115,6 +115,3 @@ project/
 * Incorporate gesture-based control for MIDI mapping
 * Visualize MIDI in DAWs or live environments
 
----
-
-Let me know if you'd like a **French version**, or if you want this as a real `README.md` file with proper headers and links to sample outputs.
